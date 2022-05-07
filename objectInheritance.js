@@ -38,6 +38,6 @@ console.log("All users", users)
 
 
 userAdmin.deleteUser(userTwo)
-// userOne.logout()
+userOne.logout()
 
 console.log("Mod users", users)
