@@ -34,8 +34,10 @@ var userAdmin = new Admin('admin@gmail.com', 'Adam Smith')
 
 var users = [userOne, userTwo, userThree, userAdmin]
 
-// userAdmin.deleteUser(userTwo)
-// userAdmin.deleteUser()
+console.log("All users", users)
+
+
+userAdmin.deleteUser(userTwo)
 // userOne.logout()
 
-console.log("users", users)
+console.log("Mod users", users)
