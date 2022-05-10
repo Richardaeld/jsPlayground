@@ -15,14 +15,23 @@ const diameter = function (radius) {
     return radius * 2
 }
 
-const calculate = function (radius, logic) {
-    const output = []
-    for (let i = 0; i < radius.length; i++) {
-        output.push(logic(radius[i]))
-    }
-    return output
-};
+// const calculate = function (radius, logic) {
+//     const output = []
+//     for (let i = 0; i < radius.length; i++) {
+//         output.push(logic(radius[i]))
+//     }
+//     return output
+// };
 
-console.log(calculate(radius, area))
-console.log(calculate(radius, circumference))
-console.log(calculate(radius, diameter))
+// console.log(calculate(radius, area))
+// console.log(calculate(radius, circumference))
+// console.log(calculate(radius, diameter))
+
+
+
+const areaResults = radius.map(x => area(x))
+const circumferenceResults = radius.map(x => circumference(x))
+const diameterResults = radius.map(x => diameter(x))
+console.log(areaResults)
+console.log(circumferenceResults)
+console.log(diameterResults)
