@@ -37,3 +37,10 @@ const obj = objArray.reduce((acc, current) => {
 }, {})
 
 console.log(obj)
+
+
+console.log(Math.max(...array))
+
+const newArray = array.reduce((acc, current) => acc + current, 0)
+
+console.log(newArray, 'new array')

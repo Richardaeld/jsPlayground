@@ -15,6 +15,7 @@ const diameter = function (radius) {
     return radius * 2
 }
 
+
 // const calculate = function (radius, logic) {
 //     const output = []
 //     for (let i = 0; i < radius.length; i++) {
@@ -32,6 +33,8 @@ const diameter = function (radius) {
 const areaResults = radius.map(x => area(x))
 const circumferenceResults = radius.map(x => circumference(x))
 const diameterResults = radius.map(x => diameter(x))
+
 console.log(areaResults)
 console.log(circumferenceResults)
 console.log(diameterResults)
+
