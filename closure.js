@@ -13,8 +13,8 @@ function makePerson(name) {
 };
 
 const person = makePerson("Spengler")
+// console.log(person.getName());
 
-console.log(person.getName());
 
 
 // X persists after addX is called 
@@ -25,5 +25,43 @@ function addX(x) {
 }
 
 const addNum = addX(10);
+// console.log(addNum(5))
 
-console.log(addNum(5))
+
+
+function timeOut () {
+    var i = 1;
+    setTimeout(() => {
+        console.log(i)
+    }, 2000);
+    console.log("i print first")
+    i = 2
+}
+
+// timeOut()
+
+
+secondsArray = [1,2,3,4,5,6]
+function secondCalls() {
+    const funcX = function (x) {
+        setTimeout(() => {
+                console.log(x)
+            }, x * 1000)
+    }
+
+    for (var i = 0; i <= 5; i++) {
+        funcX(i)
+        // setTimeout(() => {
+        //     console.log(i)
+        // }, i * 1000)
+    }
+}
+secondCalls();
+
+// function secondCalls(num) {
+//     setTimeout(() => {
+//         console.log(num)
+//     }, num * 1000)
+// }
+
+// secondsArray.map(x => secondCalls(x))
