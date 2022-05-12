@@ -11,3 +11,4 @@ console.log(toyota.getModel());
 
 let nissan = new car ('nissan');
 console.log(nissan.getModel());
+

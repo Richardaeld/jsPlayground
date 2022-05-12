@@ -1,3 +1,19 @@
+class Car {
+    constructor (year, model) {
+        this.year = year;
+        this.model = model
+    }
+    drive() {
+        console.log(this.model, "is still driving");
+        return;
+    }
+}
+
+const car1 = new Car(2013, 'Tacoma')
+
+// console.log(car1)
+car1.drive()
+
 class User {
     constructor (email, name) {
         this.email=email;
@@ -30,14 +46,14 @@ class Admin extends User {
 var userOne = new User('something@gmail.com', 'Sim Something');
 var userTwo = new User('test123@gmail.com', 'Tim Tesla');
 var userThree = new User('lummux@gmail.com', 'Lee lemon');
-var userAdmin = new Admin('admin@gmail.com', 'Adam Smith')
+var userAdmin = new Admin('admin@gmail.com', 'Adam Smith');
 
 var users = [userOne, userTwo, userThree, userAdmin]
 
-console.log("All users", users)
+// console.log("All users", users)
 
 
 userAdmin.deleteUser(userTwo)
-userOne.logout()
+// userOne.logout()
 
-console.log("Mod users", users)
+// console.log("Mod users", users)
