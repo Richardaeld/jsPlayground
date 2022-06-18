@@ -10,3 +10,4 @@ const min = Math.min(...array);
 
 console.log(max);
 console.log(min);
+
