@@ -31,6 +31,8 @@ function countWords (string) {
 
     console.log(wordCounts)
     // console.log((/[a-zA-Z]/).test(string))
+
+
 }
 
 countWords(str)
@@ -38,3 +40,7 @@ countWords(str)
 
 // regex for check
 // use space for word seperation
+
+
+
+
