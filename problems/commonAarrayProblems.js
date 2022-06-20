@@ -66,15 +66,17 @@ const people = [
     }
 ]
 
-console.log(people[0]['last'])
-
-function GroupNames (array, name) {
-    array.reduce((previous, current) => {
-        if (!previous[current['last']]) {
-            previous = (current['last'])
+// console.log(people[0]['last'])
+function GroupNames (array) {
+    return array.reduce(( acc, current) => {
+        if (!acc[current.last]) {
+            acc[current.last] = [current];
+        } else {
+            acc[current.last].push(current);
         }
-        return previous
+        // console.log(acc)
+        return acc;
     }, {})
 }
 
-console.log(GroupNames(people, "Doe"))
+console.log("Grouped names", GroupNames(people))
