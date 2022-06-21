@@ -7,7 +7,7 @@ function AddWithClosure (num1) {
 }
 
 const outsideFunction = AddWithClosure(10);
-console.log(outsideFunction(25))
+// console.log(outsideFunction(25))
 
 
 // Hoisting
@@ -24,7 +24,7 @@ foo();
 function foo () {
     var x = "I am a hoisted assignment";
     // console.log(x);
-    return console.log(x);
+    // return console.log(x);
 }
 
 // console.log(foo());
@@ -62,7 +62,7 @@ function foo () {
 
 // ---------------------------------------------------- question
 // What will this return
-console.log(typeof(typeof(1)))
+// console.log(typeof(typeof(1)))
 
 // string
 
@@ -77,38 +77,40 @@ var hero = {
 
 var stoleSecretIdentity = hero.getSecretIdentity;
 
-console.log(stoleSecretIdentity());
+// console.log(stoleSecretIdentity());
 // undefined
-console.log(hero.getSecretIdentity());
+// console.log(hero.getSecretIdentity());
 // "John Doe"
 
 // ---------------------------------------------------- question
 // Flatten this array
-const congestedArray = [[1,2,[3,[5]]],4]
-function flattenArray(array) {
-    const newArr = []
-    let runagain = false;
-    while (runagain) {
-        
-        array.map(x => {
-            if (Array.isArray(x)) {
-                newArr.push(...x);
-                runagain = true;
-            } else {
-                newArr.push(x);
-                runagain = false;
+let congestedArray = [[1,2,[3,[5]]],4]
 
-            }
-        });
+// console.log(Array.isArray(congestedArray[0]));
+// congestedArray = congestedArray.flat();
+// console.log(congestedArray);
+// console.log(Array.isArray(congestedArray[0]));
+// congestedArray = congestedArray.flat();
+// console.log(congestedArray);
+// console.log(Array.isArray(congestedArray[0]));
+// congestedArray = congestedArray.flat();
+// console.log(congestedArray);
+// console.log(Array.isArray(congestedArray[0]));
+// congestedArray = congestedArray.flat();
+// console.log(congestedArray);
 
-    }
+function flattenArray (array) {
+    returnArray = [];
+    returnArray = array.reduce((acc, current) => {
+        if (Array.isArray(current)) {
+            acc = acc.concat(flattenArray(current));
+        } else {
+            acc.push(current);
+        }
+        return acc;
+    }, []);
 
-    return newArr
+    return returnArray;
 }
 
 console.log(flattenArray(congestedArray));
-
-
-// const newArray = congestedArray.reduce((acc, current) => acc.concat(current))
-
-// console.log("newArray", newArray)
