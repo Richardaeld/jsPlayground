@@ -99,11 +99,10 @@ let congestedArray = [[1,2,[3,[5]]],4]
 // congestedArray = congestedArray.flat();
 // console.log(congestedArray);
 
-function flattenArray (array) {
-    returnArray = [];
-    returnArray = array.reduce((acc, current) => {
+function flattenArray1 (array) {
+    const returnArray = array.reduce((acc, current) => {
         if (Array.isArray(current)) {
-            acc = acc.concat(flattenArray(current));
+            acc = acc.concat(flattenArray1(current));
         } else {
             acc.push(current);
         }
@@ -113,4 +112,22 @@ function flattenArray (array) {
     return returnArray;
 }
 
-console.log(flattenArray(congestedArray));
+console.log(flattenArray1(congestedArray));
+
+
+function flattenArray2 (array) {
+    const newArray = array.reduce((acc, current) => {
+        if (Array.isArray(current)) {
+            // acc = acc.concat(current.flat());
+            acc += 1;
+            acc = acc + flattenArray2(current)
+        } else {
+            console.log("")
+            // acc.push(current);
+        }
+        return acc;
+    }, 0);
+    return newArray;
+}
+
+console.log(congestedArray.flat(flattenArray2(congestedArray)));
